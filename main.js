@@ -1,7 +1,9 @@
+ require('dotenv').config()
+ 
 const express = require("express");
 const app = express();
 var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'keyYusCljValoNMOB'}).base('appsMLN3TXdJClc2r')
+var base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base('appsMLN3TXdJClc2r')
 const port = 4000;
 var cors = require('cors')
  
